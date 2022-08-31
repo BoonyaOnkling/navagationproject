@@ -4,9 +4,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import React from 'react';
-import FirstPage from './pages/FirstPage';
-import SecondPage from './pages/SecondPage';
-import ThirdPage from './pages/ThirdPage';
+import FirstPage from './screens/FirstPage';
+import SecondPage from './screens/SecondPage';
+
 
 
 const Stack = createNativeStackNavigator();
@@ -17,14 +17,13 @@ export default function App() {
       <Stack.Navigator 
        initialRouteName='Home'
        screenOptions={{
-        headerStyle:{backgroundColor:'#202985'},
+        headerStyle:{backgroundColor:'#e9967a'},
         headerTintColor:'#ffff',
         headerTitleStyle:{fontWeight:'bold'}
        }}
       >
-        <Stack.Screen name='First Page' component={FirstPage}/>
-        <Stack.Screen name='Second Page' component={SecondPage}/>
-        <Stack.Screen name='Third Page' component={ThirdPage}/>
+        <Stack.Screen name='First' component={FirstPage}/>
+        <Stack.Screen name='Second' component={SecondPage}/>
       </Stack.Navigator>
    </NavigationContainer>
 
