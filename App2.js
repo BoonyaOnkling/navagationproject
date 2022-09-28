@@ -10,7 +10,7 @@ function HomeScreen({navigation,route}){
   React.useEffect(()=>{
     if(route.params?.post){
       //Post updated.do somethin with 'route.parames.post'
-      //For example, sent the post to the server
+      //For example, sent the post to the serverF
     }
   },[route.params?.post]);
 

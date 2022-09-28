@@ -69,7 +69,7 @@ const ItemSeparatorView = () => {
    )
   }
  
- export default ProductScreen
+  export default ProductScreen
  
  const styles = StyleSheet.create({
     container: {
