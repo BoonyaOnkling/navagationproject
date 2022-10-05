@@ -11,7 +11,7 @@ import {
 import HomeScreen from './HomeScreen';
 import React from 'react';
 import ProductScreen from './screens/ProductScreen';
-
+import DetelScreen from './screens/DetelScreen';
 
 const MyTheme ={
   ...DefaultTheme,
@@ -58,6 +58,28 @@ function CustomDrawerContent(props){
   )
 }
 
+const Stack = createDrawerNavigator();
+
+function ProductStack(){
+  return(
+    <Stack.Navigator
+      screenOptions={{
+        headerStyle:{
+          backgroundcolor:'#0096DA'
+        },
+        headerTintColor:'#ffff',
+        headerTitleStyle:{
+          fontWeight:'bold'
+        }
+      }}
+    >
+      <Stack.Screen name="Prouct" component={ProductScreen}/>
+      <Stack.Screen name="Detail" component={DetelScreen}/>
+
+    </Stack.Navigator>
+  )
+}
+
 
 const Drawer = createDrawerNavigator();
 
@@ -74,7 +96,7 @@ function MyDrawer(){
       }}
       >
         <Drawer.Screen name='Home' component={HomeScreen}/>
-        <Drawer.Screen name='Product' component={ProductScreen}/>
+        <Drawer.Screen name='Product' component={ProductStack}/>
       </Drawer.Navigator>
   );
 }
